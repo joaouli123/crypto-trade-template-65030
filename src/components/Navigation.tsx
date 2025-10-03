@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Command, Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { ThemeToggle } from "./ThemeToggle";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -61,7 +62,7 @@ const Navigation = () => {
           </div>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-4">
             {navItems.map((item) => (
               <a
                 key={item.name}
@@ -77,6 +78,7 @@ const Navigation = () => {
                 {item.name}
               </a>
             ))}
+            <ThemeToggle />
             <Button 
               onClick={() => scrollToSection('cta')}
               size="sm"
@@ -112,15 +114,18 @@ const Navigation = () => {
                       {item.name}
                     </a>
                   ))}
-                  <Button 
-                    onClick={() => {
-                      setIsMobileMenuOpen(false);
-                      scrollToSection('cta');
-                    }}
-                    className="button-gradient mt-4"
-                  >
-                    Start Trading
-                  </Button>
+                  <div className="flex gap-2 mt-4">
+                    <ThemeToggle />
+                    <Button 
+                      onClick={() => {
+                        setIsMobileMenuOpen(false);
+                        scrollToSection('cta');
+                      }}
+                      className="button-gradient flex-1"
+                    >
+                      Start Trading
+                    </Button>
+                  </div>
                 </div>
               </SheetContent>
             </Sheet>

@@ -11,7 +11,7 @@ import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-black text-foreground">
+    <div className="min-h-screen bg-background text-foreground">
       <Navigation />
       
       {/* Hero Section */}
