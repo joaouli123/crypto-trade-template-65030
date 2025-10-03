@@ -23,7 +23,7 @@ const Index = () => {
       >
         {/* Background */}
         <div 
-          className="absolute inset-0 -z-10 bg-[#0A0A0A]"
+          className="absolute inset-0 -z-10 bg-background"
         />
         
         <div className="flex justify-center">
@@ -42,11 +42,11 @@ const Index = () => {
         
         <div className="max-w-4xl relative z-10 mx-auto">
           <h1 className="text-5xl md:text-7xl font-normal mb-4 tracking-tight text-center">
-            <span className="text-gray-200">
+            <span className="text-muted-foreground">
               <TextGenerateEffect words="Trade crypto with" />
             </span>
             <br />
-            <span className="text-white font-medium">
+            <span className="text-foreground font-medium">
               <TextGenerateEffect words="confidence & security" />
             </span>
           </h1>
@@ -55,10 +55,10 @@ const Index = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl mx-auto text-center"
+            className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto text-center"
           >
             Experience seamless cryptocurrency trading with advanced features, real-time analytics, and institutional-grade security.{" "}
-            <span className="text-white">Start trading in minutes.</span>
+            <span className="text-foreground">Start trading in minutes.</span>
           </motion.p>
           
           <motion.div
@@ -70,7 +70,7 @@ const Index = () => {
             <Button size="lg" className="button-gradient">
               Start Trading Now
             </Button>
-            <Button size="lg" variant="link" className="text-white">
+            <Button size="lg" variant="link" className="text-foreground">
               View Markets <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
           </motion.div>
@@ -96,24 +96,24 @@ const Index = () => {
       <LogoCarousel />
 
       {/* Features Section */}
-      <div id="features" className="bg-black">
+      <div id="features" className="bg-background">
         <FeaturesSection />
       </div>
 
       {/* Pricing Section */}
-      <div id="pricing" className="bg-black">
+      <div id="pricing" className="bg-background">
         <PricingSection />
       </div>
 
       {/* Testimonials Section */}
-      <div className="bg-black">
+      <div className="bg-background">
         <TestimonialsSection />
       </div>
 
       {/* CTA Section */}
-      <section className="container px-4 py-20 relative bg-black">
+      <section className="container px-4 py-20 relative bg-background">
         <div 
-          className="absolute inset-0 opacity-40"
+          className="absolute inset-0 opacity-40 dark:opacity-40 light:opacity-20"
           style={{
             backgroundImage: 'url("/lovable-uploads/21f3edfb-62b5-4e35-9d03-7339d803b980.png")',
             backgroundSize: 'cover',
@@ -124,7 +124,7 @@ const Index = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="bg-[#0A0A0A]/80 backdrop-blur-lg border border-white/10 rounded-2xl p-8 md:p-12 text-center relative z-10"
+          className="bg-card/80 backdrop-blur-lg border border-border rounded-2xl p-8 md:p-12 text-center relative z-10"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Ready to start trading?
@@ -140,7 +140,7 @@ const Index = () => {
       </section>
 
       {/* Footer */}
-      <div className="bg-black">
+      <div className="bg-background">
         <Footer />
       </div>
     </div>

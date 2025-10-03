@@ -69,6 +69,10 @@
   position: relative;
 }
 
+.light .glass {
+  @apply bg-black/5;
+}
+
 .glass::before {
   content: '';
   position: absolute;
@@ -83,8 +87,16 @@
   pointer-events: none;
 }
 
+.light .glass::before {
+  background: linear-gradient(225deg, rgba(0,0,0,0.2), rgba(0,0,0,0.05));
+}
+
 .glass-hover {
   @apply transition-all duration-300 hover:bg-white/10;
+}
+
+.light .glass-hover:hover {
+  @apply bg-black/10;
 }
 
 .text-gradient {
